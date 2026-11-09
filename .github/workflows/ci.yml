@@ -1,0 +1,45 @@
+name: CI
+
+on:
+  push:
+    branches: ["**"]
+  pull_request:
+
+jobs:
+  build-and-test:
+    # Windows Forms は Windows でしかビルドできないため windows-latest を使う
+    runs-on: windows-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v5
+
+      - name: Setup .NET 8
+        uses: actions/setup-dotnet@v5
+        with:
+          dotnet-version: 8.0.x
+
+      - name: Restore
+        run: dotnet restore Othello.sln
+
+      - name: Build
+        run: dotnet build Othello.sln --configuration Release --no-restore
+
+      - name: Test
+        run: dotnet test Othello.sln --configuration Release --no-build --logger "trx;LogFileName=test-results.trx" --results-directory TestResults
+
+      - name: Upload test results
+        if: always()
+        uses: actions/upload-artifact@v6
+        with:
+          name: test-results
+          path: TestResults
+
+      - name: Publish app
+        run: dotnet publish Othello/Othello.csproj --configuration Release --output publish
+
+      - name: Upload app
+        uses: actions/upload-artifact@v6
+        with:
+          name: Othello-app
+          path: publish
