@@ -5,6 +5,10 @@ VisualStudioVersion = 17.14.37710.0 d17.14
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Othello", "Othello\Othello.csproj", "{2D52DA0C-B35B-4FF4-A101-49A61F3403CC}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Othello.Core", "Othello.Core\Othello.Core.csproj", "{6B1E4C2A-3F5D-4E8B-9A7C-1D2E3F4A5B6C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Othello.Tests", "Othello.Tests\Othello.Tests.csproj", "{8C2F5D3B-4A6E-4F9C-8B1D-2E3F4A5B6C7D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +19,14 @@ Global
 		{2D52DA0C-B35B-4FF4-A101-49A61F3403CC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2D52DA0C-B35B-4FF4-A101-49A61F3403CC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2D52DA0C-B35B-4FF4-A101-49A61F3403CC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6B1E4C2A-3F5D-4E8B-9A7C-1D2E3F4A5B6C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6B1E4C2A-3F5D-4E8B-9A7C-1D2E3F4A5B6C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6B1E4C2A-3F5D-4E8B-9A7C-1D2E3F4A5B6C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6B1E4C2A-3F5D-4E8B-9A7C-1D2E3F4A5B6C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8C2F5D3B-4A6E-4F9C-8B1D-2E3F4A5B6C7D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8C2F5D3B-4A6E-4F9C-8B1D-2E3F4A5B6C7D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8C2F5D3B-4A6E-4F9C-8B1D-2E3F4A5B6C7D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8C2F5D3B-4A6E-4F9C-8B1D-2E3F4A5B6C7D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
